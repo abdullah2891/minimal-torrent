@@ -28,3 +28,23 @@
   content: "";
   padding: 0;
 }
+
+
+.icon{
+  width:20px;
+}
+.row{
+  margin-left: 10%;
+  width:80%;
+  background-color:white;
+  border-style:solid;
+  border-color:black;
+  border-radius:2%;;
+  background-color:white;
+  padding : 10px 10px 10px 10px;
+  box-shadow: 5px 5px;
+
+}
+body{
+  background-color : rgb(245,241,240);
+}

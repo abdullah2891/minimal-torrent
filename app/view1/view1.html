@@ -1,1 +1,18 @@
-<p>This is the partial for view 1.</p>
+<div class = "row" ng-repeat= "tab in data">
+  <div class = "col-md-1">
+      <img class ="icon" src = "https://cdn3.iconfinder.com/data/icons/tools-solid-icons-vol-2/72/88-512.png" alt="category" />
+  </div>
+  <div class = "col-md-10">
+    <strong>{{tab.title}}</strong>
+    <p>
+      {{tab.pubDate}}
+    </p>
+
+  </div>
+  <div class = "col-md-1">
+    <a href="{{tab.torrentLink}}">
+      <img class="icon" src="http://www.hobotraveler.com/movies/torrent-downloads-that-have-magnet-links.jpg" alt="magnet link" />
+    </a>
+  </div>
+
+</div>

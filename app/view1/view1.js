@@ -9,6 +9,16 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope','$http',function($scope,$http) {
+   $http({
+                method: "post",
+                url: "/api/search",
+                data: {
+                    search: "pushing daisies",
+                }
+            }).success(function(response){
+              $scope.data = response.list;
+            })
+
 
 }]);
