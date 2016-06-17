@@ -13,8 +13,12 @@ exports.getSearchResult = function(req,res){
 },function(e, data){
     //will get the contents from
     //http://kickass.to/json.php?q=test&field=seeders&order=desc&page=2
-    if(e)
-        res.send(400,e);
-    res.send(200,data)//actual json response
+    if(e){
+      res.send(400,e);
+    }else{
+      res.send(200,data)//actual json response
+    }
+
+
 })
 }
