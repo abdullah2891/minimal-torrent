@@ -36,7 +36,10 @@ angular.module('myApp.view1', ['ngRoute'])
           $scope.convert = function(byte){
             return byte/1000000;
           }
-
+          $scope.compare = function(comp1,comp2){
+            if(comp1===comp2) return true;
+            if(comp1!=comp2)return false;
+          }
 
 
 
