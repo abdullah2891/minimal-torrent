@@ -2,7 +2,7 @@
     <div class="form-group">
       <input type="text" class="form-control" ng-model="search" placeholder="Pushing Daisies">
     </div>
-    <button type="submit" ng-click ="result()" class="btn btn-default">Search</button>
+    <button type="submit" ng-click ="result()" class="btn btn-primary">Search</button>
   </form>
 
 <div class = "row tab" ng-repeat= "tab in data">
@@ -19,13 +19,14 @@
   <div class = "col-md-2">
     <a href="{{tab.torrentLink}}">
       <img class="icon" src="static/static/magnet.png" alt="magnet link" />
-      Magnet Link
+      <span class = "label label-info">MAGNET LINK</span>
     </a>
     <div class = "status">
-      Seed {{tab.seeds}}
-      Leechs {{tab.leechs}}
+      <span class="label label-primary">Seeds {{tab.seeds}}</span>
+      <span class="label label-danger">Leechs {{tab.leechs}}</span>
+
       <br/>
-      Size : {{convert(tab.size)}}MB
+      <span class="label label-info">Size : {{convert(tab.size)}}MB</span>
 
     </div>
   </div>
