@@ -31,9 +31,11 @@ angular.module('myApp.view1', ['ngRoute'])
                  $scope.data = response.list;
                })
 
-  }
+          }
 
-
+          $scope.convert = function(byte){
+            return byte/1000000;
+          }
 
 
 

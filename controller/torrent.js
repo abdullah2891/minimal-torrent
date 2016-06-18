@@ -8,7 +8,7 @@ exports.getSearchResult = function(req,res){
     q: search,//actual search term
     field:'seeders',//seeders, leechers, time_add, files_count, empty for best match
     order:'desc',//asc or desc
-    page: 2,//page count, obviously
+    page: 1,//page count, obviously
     url: 'https://kat.cr',//changes site default url (https://kat.cr)
 },function(e, data){
     //will get the contents from
