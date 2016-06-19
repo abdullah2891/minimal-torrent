@@ -21,7 +21,7 @@ angular.module('myApp.view1', ['ngRoute'])
                  method: "post",
                  url: "/api/search",
                  data: {
-                     search: "Pushing Daisies",
+                     search: "Game of Thrones",
                  }
              }).success(function(response){
                $scope.data = response;
