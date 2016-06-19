@@ -1,13 +1,15 @@
+<!---Search in tab --->
+
 <form class="navbar-form navbar-right navbar-fixed-bottom" role="search">
     <div class="form-group">
       <input type="text" class="form-control" ng-model="search" placeholder="Pushing Daisies">
     </div>
     <button type="submit" ng-click ="result()" class="btn btn-primary">Search</button>
   </form>
-
+<!---loads data in tab--->
 <div class = "row tab" ng-repeat= "tab in data">
   <div class = "col-md-1">
-    <img class ="icon"  src = "static/static/other.png" alt="category" />
+    <img class ="icon"  src = "{{choose(tab.category)}}" alt="category" />
 
   </div>
   <div class = "col-md-9">

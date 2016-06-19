@@ -1,5 +1,11 @@
 'use strict';
 
+
+var pictureObj = {
+  tv:"static/static/tv.png",
+  app:"static/static/application.png"
+}
+
 angular.module('myApp.view1', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -34,11 +40,19 @@ angular.module('myApp.view1', ['ngRoute'])
           }
 
           $scope.convert = function(byte){
-            return byte/1000000;
+            return (byte/1000000).toFixed(2);
           }
-          $scope.compare = function(comp1,comp2){
-            if(comp1===comp2) return true;
-            if(comp1!=comp2)return false;
+
+
+          $scope.choose = function(icon){
+            switch(icon){
+            case 'TV': return 'static/static/tv.png';
+            case 'Applications': return 'static/static/application.png';
+            case 'Movies': return 'static/static/movies.png';
+            case 'Books': return 'static/static/book.png';
+
+            default: return 'static/static/other.png';
+          }
           }
 
 
