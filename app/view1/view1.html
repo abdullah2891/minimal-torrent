@@ -10,6 +10,13 @@
 
 <div ng-show = "data.total_results=='0'">
   <h1 class = "label label-info">Did not find your requested query</h1>
+
+  <div class="form-group">
+    <input type="text" class="form-control" style="width:100%;" ng-model="search" placeholder="Search Here">
+  </div>
+  <button type="submit" ng-click ="result()" class="btn btn-primary">Search</button>
+  </form>
+  
 </div>
 
 <div  class = "row tab" ng-repeat= "tab in data.list">
