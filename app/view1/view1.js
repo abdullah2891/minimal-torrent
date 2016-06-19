@@ -24,7 +24,7 @@ angular.module('myApp.view1', ['ngRoute'])
                      search: "Pushing Daisies",
                  }
              }).success(function(response){
-               $scope.data = response.list;
+               $scope.data = response;
              })
   $scope.result = function(){
     $http({
