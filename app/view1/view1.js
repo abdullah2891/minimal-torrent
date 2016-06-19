@@ -34,7 +34,7 @@ angular.module('myApp.view1', ['ngRoute'])
                        search: $scope.search,
                    }
                }).success(function(response){
-                 $scope.data = response.list;
+                 $scope.data = response;
                })
 
           }

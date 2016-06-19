@@ -7,7 +7,12 @@
     <button type="submit" ng-click ="result()" class="btn btn-primary">Search</button>
   </form>
 <!---loads data in tab--->
-<div class = "row tab" ng-repeat= "tab in data">
+
+<div ng-show = "data.total_results=='0'">
+  <h1 class = "label label-info">Did not find your requested query</h1>
+</div>
+
+<div  class = "row tab" ng-repeat= "tab in data.list">
   <div class = "col-md-1">
     <img class ="icon"  src = "{{choose(tab.category)}}" alt="category" />
 
